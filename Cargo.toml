@@ -1,0 +1,17 @@
+[package]
+name = "bumble-rush"
+version = "0.1.0"
+edition = "2021"
+description = "a simple game to kill time"
+license = "MIT"
+repository = "https://github.com/gg6789t/bumble-rush"
+readme = "README.md"
+keywords = ["game", "terminal", "tui"]
+categories = ["games"]
+
+[dependencies]
+crossterm = "0.28"
+
+[profile.release]
+opt-level = 3
+lto = true
