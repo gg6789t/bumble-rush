@@ -1,55 +1,49 @@
-# 🐝 Bumble Rush
+# bumble rush
 
 a simple game to kill time
 
-Guide a little bee between stone and crystal pillars, grab honey, and see how far you can buzz before the sun sets... and rises again. Rendered with colored half-block pixels right in your terminal.
+it's inspired by flappy bird, but with a bee, power-ups, and a sky that changes as you go.
 
-![Bumble Rush screenshot](assets/screenshot.png)
+it runs right in your terminal and uses colored half-block characters so it actually looks like pixel art instead of ascii soup. the sky slowly goes from day to sunset to night the further you get, which is honestly my favorite part.
 
-## Install
+![screenshot](assets/screenshot.png)
 
-**Homebrew (macOS / Linux)**
+## install
+
+with homebrew (mac or linux):
 
 ```sh
 brew install gg6789t/tap/bumble-rush
 ```
 
-**Arch Linux (AUR)**
-
-```sh
-paru -S bumble-rush
-```
-
-**From source** (needs Rust)
+with cargo, if you have rust:
 
 ```sh
 cargo install --git https://github.com/gg6789t/bumble-rush
 ```
 
-Then run `bumble-rush`.
+then just run `bumble-rush`.
 
-## Controls
+an AUR package is ready too, it'll go up once AUR opens new accounts again.
 
-| Key | Action |
-| --- | --- |
-| `Space` / `W` / `↑` / mouse click | Flap |
-| `P` | Pause |
-| `Q` / `Esc` | Quit |
+## how to play
 
-## Features
+space, w, up arrow or clicking makes the bee flap. p pauses, q or esc quits. that's it.
 
-- **Honey drops** — +1 each, sometimes in arcs between pillars
-- **Power-ups** — `S` shield (survives one crash), `T` slow-mo, `M` honey magnet, `2` double points
-- **Close calls** — skim a pillar's edge for a bonus point
-- **Moving crystal pillars** and a difficulty curve that keeps ramping up
-- **Day → sunset → night → dawn** sky cycle with parallax scenery
-- **Medals** — bronze 10, silver 25, gold 50, diamond 100
-- Best score saved to `~/.bumble_rush_best`
+some stuff that shows up while you play:
 
-## Colors
+- honey drops are worth a point each
+- power-ups: **S** is a shield that saves you from one crash (even the ground), **T** slows everything down for a few seconds, **M** pulls honey towards you, **2** gives double points
+- if you barely squeeze past a pillar you get a bonus point for the close call
+- after a while purple crystal pillars start showing up and those ones move, so watch out
+- you get a medal at 10, 25, 50 and 100. good luck with diamond
 
-24-bit color is used when the terminal advertises it (iTerm2, Ghostty, WezTerm, Kitty, VS Code, …), otherwise it falls back to 256 colors. Force either with `--truecolor` or `--256`. Minimum terminal size is 40×16.
+your best score is saved in `~/.bumble_rush_best`.
 
-## License
+## if the colors look weird
+
+it tries to figure out if your terminal supports full 24-bit color. if it guesses wrong you can force it with `--truecolor` or `--256`. your terminal needs to be at least 40x16.
+
+## license
 
 MIT
